@@ -13,6 +13,14 @@ tasks:
     command: |
       echo 'multiline command script 1' 
       echo 'multiline command script 2' 
+  - name: Await Task
+    command: |
+      gp sync-await bundle
+      echo 'awaited for another task' 
+  - name: Awaited Task
+    command: |
+      gp sync-done bundle
+      echo 'awaited for this task' 
 
 vscode:
   extensions:
