@@ -13,3 +13,7 @@ tasks:
     command: |
       echo 'multiline command script 1' 
       echo 'multiline command script 2' 
+
+vscode:
+  extensions:
+    - dracula-theme.theme-dracula
