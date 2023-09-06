@@ -15,12 +15,15 @@ tasks:
       echo 'multiline command script 2' 
   - name: Await Task
     command: |
-      gp sync-await bundle
-      echo 'awaited for another task' 
+      gp sync-await tasktowaiton
+      echo 'awaited for another task ' + timestamp 
   - name: Awaited Task
     command: |
-      gp sync-done bundle
-      echo 'awaited for this task' 
+      gp sync-done tasktowaiton
+      timestamp() {
+        date +"%T" # current time
+      }
+      echo 'awaited for this task at ' + timestamp 
 
 vscode:
   extensions:
