@@ -25,6 +25,7 @@ tasks:
       echo 'awaited for this task'
       TIMESTAMP=$(date +%Y%m%d_%H%M%S)
       echo "Timestamp: $TIMESTAMP"
+      sleep 1
 
 vscode:
   extensions:
