@@ -9,3 +9,7 @@ tasks:
     init: echo 'init script' # Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
   - name: Commmand Task
     command: echo 'command script' # Use this to start your database or development server.
+  - name: Multiline Commmand Task
+    command: |
+      echo 'multiline command script 1' 
+      echo 'multiline command script 2' 
