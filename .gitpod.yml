@@ -3,6 +3,8 @@
 # Before and init runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
 
 tasks:
+  - name: Start web server
+    init: python -m http.server 8000
   - name: Before Task 
     before: echo 'before script'  ## Use this for tasks that need to run before init and before command. For example, customize the terminal or install global project dependencies.
   - name: Init Task
@@ -26,6 +28,10 @@ tasks:
       TIMESTAMP=$(date +%Y%m%d_%H%M%S)
       echo "Timestamp: $TIMESTAMP"
       sleep 1
+
+ports:
+  - port: 8000
+    onOpen: open-preview
 
 vscode:
   extensions:
