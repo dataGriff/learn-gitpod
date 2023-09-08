@@ -37,26 +37,20 @@ tasks:
       TIMESTAMP=$(date +%Y%m%d_%H%M%S)
       echo "Timestamp: $TIMESTAMP"
       sleep 1
-  - name: Installed Python Version
-    command: python --version
-    openMode: split-left
   - name: Installed Docker Version
     command: docker version
-    openMode: split-left
   - name: Installed Ruby Version
     command: ruby -v
-    openMode: split-left
   - name: Installed Java Version
     command: java -version
+  - name: Installed Go Version
+    command: go version
+  - name: Installed Python Version
+    command: python --version
     openMode: split-left
   - name: Installed Node Version
     command: node -v
     openMode: split-left
-  - name: Installed Go Version
-    command: go version
-    openMode: split-left
-
-
 
 ports:
   - port: 8000
