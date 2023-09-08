@@ -1,3 +1,4 @@
+---
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 
 # Before and init runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
@@ -9,6 +10,7 @@ tasks:
     before: echo 'before script'  ## Use this for tasks that need to run before init and before command. For example, customize the terminal or install global project dependencies.
     init: echo 'init script' # Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
     command: echo 'command script' # Use this to start your database or development server.
+    openMode: split-left
   - name: Env Task
     env:
       MYVAR: "Hello World"
@@ -48,7 +50,7 @@ tasks:
     command: node -v
   - name: Installed Go Version
     command: go version
-    
+
 
 
 
