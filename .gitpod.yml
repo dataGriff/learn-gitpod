@@ -13,6 +13,8 @@ tasks:
     env:
       MYVAR: "Hello World"
     command: echo $MYVAR 
+  - name: Account Env Task
+    command: echo $UNIQUE_NAMESPACE 
   - name: Multiline Commmand Task
     command: |
       echo 'multiline command script 1' 
