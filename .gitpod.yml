@@ -9,8 +9,7 @@ tasks:
   - name: All Tasks
     before: echo 'before script'  ## Use this for tasks that need to run before init and before command. For example, customize the terminal or install global project dependencies.
     init: echo 'init script' # Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
-    command: echo 'command script' # Use this to start your database or development server.
-    openMode: split-left
+    command: echo 'command script' # Use this to start your database or development server
   - name: Env Task
     env:
       MYVAR: "Hello World"
@@ -40,17 +39,22 @@ tasks:
       sleep 1
   - name: Installed Python Version
     command: python --version
+    openMode: split-left
   - name: Installed Docker Version
     command: docker version
+    openMode: split-left
   - name: Installed Ruby Version
     command: ruby -v
+    openMode: split-left
   - name: Installed Java Version
     command: java -version
+    openMode: split-left
   - name: Installed Node Version
     command: node -v
+    openMode: split-left
   - name: Installed Go Version
     command: go version
-
+    openMode: split-left
 
 
 
