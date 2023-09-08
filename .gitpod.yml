@@ -19,7 +19,7 @@ tasks:
       echo 'multiline command script 2' 
   - name: Gitpod Default Env Variables
     command: |
-      env grep | GITPOD_
+      env | grep GITPOD_
       echo $GITPOD_WORKSPACE_URL
   - name: Await Task
     command: |
