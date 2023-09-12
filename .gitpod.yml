@@ -55,6 +55,7 @@ tasks:
 ports:
   - port: 8000
     onOpen: open-preview
+    visibility: public
 
 vscode:
   extensions:
